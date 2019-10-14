@@ -1,0 +1,27 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "interface-name": [true, "never-prefix"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  },
+  "rules": {
+    "interface-name" : [true, "never-prefix"],
+    "ordered-imports": false,
+    "import-sources-order": "any",
+    "named-imports-order": "any",
+    "object-literal-sort-keys": false,//解决：The key 'content' is not sorted alphabetically
+    "no-console": false, //解决：Calls to 'console.log' are not allowed
+    "jsx-no-lambda": false //解决：Lambdas are forbidden in JSX attributes due to their rendering performance impact
+
+  },
+  "jsRules": {
+    "no-console": false, //解决：Calls to 'console.log' are not allowed
+    "object-literal-sort-keys": false,
+    "jsx-no-lambda": false //解决：Lambdas are forbidden in JSX attributes due to their rendering performance impact
+  }
+
+}
